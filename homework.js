@@ -19,16 +19,12 @@ function greeting(name) {
 // number which, when divided by 2, has a remainder of 1 or -1.
 
 function isOdd(x) {
-    if (x % 2 === 0) {
-        return false
-    } else if (x % 2 === 1) {
-        return true;
-    } else if (x % 2 === -1) {
-        return true;
+    if ((x % 2 === 1) || (x % 2 === -1)) {
+        return true
     } else {
         return false
     }
-};
+}
 
 // 5. Create a function called isEven that, given a number, will
 // return true if it is even and false if it is not. An even number is a
@@ -143,15 +139,15 @@ function multigreeting(name, lang) {
 function gcd(a, b) {
     let d = 0;
     while ((isEven(a)) && (isEven(b))) {
-        a = a / 2;
-        b = b / 2;
+        a /= 2;
+        b /= 2;
         d++;
     }
     while (a !== b) {
         if (isEven(a)) {
-            a = a / 2
+            a /= 2
         } else if (isEven(b)) {
-            b = b / 2
+            b /= 2
         } else if (a > b) {
             a = (a - b) / 2
         } else {
