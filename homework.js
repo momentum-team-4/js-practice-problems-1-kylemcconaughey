@@ -30,11 +30,19 @@ function isOdd(x) {
 // return true if it is even and false if it is not. An even number is a
 // number which, when divided by 2, has a remainder of 0.
 
-function isEven(x) {
+function isEven2(x) {
     if (x % 2 === 0) {
         return true
     } else {
         return false
+    }
+}
+
+function isEven(x) {
+    if (isOdd(x) || (x % 1 !== 0)) {
+        return false
+    } else {
+        return true
     }
 }
 
