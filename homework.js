@@ -147,5 +147,18 @@ function gcd(a, b) {
         b = b / 2;
         d++;
     }
+    while (a !== b) {
+        if (isEven(a)) {
+            a = a / 2
+        } else if (isEven(b)) {
+            b = b / 2
+        } else if (a > b) {
+            a = (a - b) / 2
+        } else {
+            b = (b - a) / 2
+        }
+    }
+    let g = a;
+    return g * 2 ** d;
 
 }
